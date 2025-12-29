@@ -49,7 +49,7 @@ export default function Navigation() {
             <img
               src="/Emoni-Samuel.png"
               alt="Brand Logo"
-              className="h-17 md:h-16 lg:h-18 w-auto object-contain"
+              className="h-12 md:h-14 lg:h-18 w-auto object-contain"
             />
           </div>
 
