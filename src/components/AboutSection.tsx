@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { CheckCircle2, Code, Palette, Target, Heart, Search, Lightbulb, Rocket, CheckCheck, Award, TrendingUp, Users, Zap, Star, Briefcase, Coffee, Globe } from "lucide-react";
 
 export default function AboutSection() {
-
-  const profileImageUrl = "/sam.jpg"; // Replace with actual image path
+  const profileImageUrl = "public/assets/sam.jpg"; // Replace with your actual image path
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("journey");
 
