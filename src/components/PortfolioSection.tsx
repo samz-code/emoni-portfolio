@@ -19,7 +19,7 @@ const portfolioData = {
   client: "Organic Food Brand",
   description: "Nature-inspired logo with leaf elements",
   impact: "Increased customer trust and engagement",
-  image: "public/assets/logos/logo2.jpg",
+  image: "/assets/logos/logo2.jpg",
 },
 {
   title: "Apex Legal",
