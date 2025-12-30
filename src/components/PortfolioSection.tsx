@@ -12,7 +12,7 @@ const portfolioData = {
   client: "Financial Technology Company",
   description: "Modern geometric logo symbolizing secure digital transactions",
   impact: "Enhanced brand recognition by 80%",
-  image: "public/assets/logos/logo1.jpg",
+  image: "/assets/logos/logo1.jpg",
 },
 {
   title: "Green Harvest",
