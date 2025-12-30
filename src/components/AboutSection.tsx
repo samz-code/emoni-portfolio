@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { CheckCircle2, Code, Palette, Target, Heart, Search, Lightbulb, Rocket, CheckCheck, Award, TrendingUp, Users, Zap, Star, Briefcase, Coffee, Globe, Download, Database, MessageCircle, BarChart, DollarSign, Video, Computer, Wrench } from "lucide-react";
+
 export default function AboutSection() {
   const profileImageUrl = "/assets/logos/profile-image.jpg"; // Replace with your actual profile image path
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
@@ -224,7 +225,7 @@ export default function AboutSection() {
           {/* Profile Section */}
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-12 md:mb-20 lg:mb-24">
             {/* Profile Image */}
-            <div className="relative order-2 lg:order-1">
+            <div className="relative order-1 lg:order-1">
               <div className="relative aspect-square rounded-2xl md:rounded-3xl bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20 p-1 overflow-hidden backdrop-blur-xl border border-white/20 shadow-2xl shadow-purple-500/20">
                 <div className="relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden group">
                   <img
@@ -270,7 +271,7 @@ export default function AboutSection() {
             </div>
 
             {/* Content */}
-            <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
+            <div className="space-y-6 md:space-y-8 order-2 lg:order-2">
               <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl md:rounded-2xl p-6 md:p-8 hover:bg-white/10 transition-all shadow-xl">
                 <p className="text-base md:text-lg lg:text-xl text-white leading-relaxed">
                   Hi! I'm <strong className="text-indigo-400">Samuel A. Emoni</strong>, a Computer Science Graduate and multi-talented professional with over <strong className="text-purple-400">4 years of experience in creative design</strong> and more than <strong className="text-pink-400">3 years in programming and system development</strong>.
