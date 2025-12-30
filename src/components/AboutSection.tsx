@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { CheckCircle2, Code, Palette, Target, Heart, Search, Lightbulb, Rocket, CheckCheck, Award, TrendingUp, Users, Zap, Star, Briefcase, Coffee, Globe } from "lucide-react";
+import { CheckCircle2, Code, Palette, Target, Heart, Search, Lightbulb, Rocket, CheckCheck, Award, TrendingUp, Users, Zap, Star, Briefcase, Coffee, Globe, Download, Database, MessageCircle, BarChart, DollarSign, Video, Computer, Wrench } from "lucide-react";
 
 export default function AboutSection() {
-  const profileImageUrl = "public/assets/sam.jpg"; // Replace with your actual image path
+  const profileImageUrl = "public/assets/sam.jpg";
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("journey");
 
@@ -16,7 +16,12 @@ export default function AboutSection() {
     "UI/UX Design",
     "Hardware Troubleshooting",
     "Computer Repair",
-    "Digital Marketing"
+    "Digital Marketing",
+    "Data Management",
+    "Database Creation",
+    "Data Analysis",
+    "Communication Skills",
+    "Analytical Skills"
   ];
 
   useEffect(() => {
@@ -36,7 +41,7 @@ export default function AboutSection() {
     { 
       title: "Video Editing", 
       detail: "Professional Video Production & Post-Production",
-      icon: Code,
+      icon: Video,
       color: "from-purple-500 to-violet-500"
     },
     { 
@@ -47,26 +52,26 @@ export default function AboutSection() {
     },
     { 
       title: "Web Development", 
-      detail: "Responsive Sites, WordPress, Custom Web Apps",
+      detail: "Responsive Websites & Web Applications",
       icon: Globe,
       color: "from-green-500 to-emerald-500"
     },
     { 
-      title: "System Development", 
-      detail: "Custom Software Solutions & Applications",
-      icon: Code,
+      title: "Payment integration Development", 
+      detail: "API Payment Gateway Integration",
+      icon: DollarSign,
       color: "from-indigo-500 to-blue-500"
     },
     { 
       title: "Programming", 
       detail: "Python, JavaScript, PHP, and More",
-      icon: Zap,
+      icon: Code,
       color: "from-yellow-500 to-orange-500"
     },
     { 
       title: "UI/UX Design", 
       detail: "User Interface & Experience Design",
-      icon: Star,
+      icon: Computer,
       color: "from-pink-500 to-purple-500"
     },
     { 
@@ -78,7 +83,7 @@ export default function AboutSection() {
     { 
       title: "Computer Repair", 
       detail: "Hardware Maintenance & Upgrades",
-      icon: Award,
+      icon: Wrench,
       color: "from-cyan-500 to-blue-500"
     },
     { 
@@ -86,6 +91,36 @@ export default function AboutSection() {
       detail: "Social Media Content, Ads, Campaigns",
       icon: TrendingUp,
       color: "from-violet-500 to-purple-500"
+    },
+    { 
+      title: "Data Management", 
+      detail: "Organizing and Managing Complex Data",
+      icon: Database,
+      color: "from-blue-500 to-indigo-500"
+    },
+    { 
+      title: "Database Creation", 
+      detail: "Designing and Building Database Systems",
+      icon: Database,
+      color: "from-green-500 to-teal-500"
+    },
+    { 
+      title: "Data Analysis", 
+      detail: "Interpreting Data for Informed Decisions",
+      icon: CheckCircle2,
+      color: "from-orange-500 to-red-500"
+    },
+    { 
+      title: "Communication Skills", 
+      detail: "Clear and Effective Client Communication",
+      icon: MessageCircle,
+      color: "from-purple-500 to-pink-500"
+    },
+    { 
+      title: "Analytical Skills", 
+      detail: "Problem-Solving and Critical Thinking",
+      icon: BarChart,
+      color: "from-cyan-500 to-blue-500"
     }
   ];
 
@@ -150,9 +185,20 @@ export default function AboutSection() {
     }
   ];
 
+  const handleDownloadResume = () => {
+    // Replace this with your actual resume file path
+    const resumePath = "/path/to/your/resume.pdf";
+    const link = document.createElement('a');
+    link.href = resumePath;
+    link.download = "Samuel_Emoni_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="about" className="py-12 md:py-20 lg:py-32 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 overflow-hidden relative">
-      {/* Gradient Overlays - Like Hero */}
+      {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-0" />
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-indigo-500/30 rounded-full blur-[80px] md:blur-[120px] animate-pulse" />
@@ -184,7 +230,7 @@ export default function AboutSection() {
                 <div className="relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden group">
                   <img
                     src={profileImageUrl}
-                    alt="Samuel A. Emoni - Graphic Designer & Web Developer"
+                    alt="Samuel A. Emoni"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
@@ -233,6 +279,23 @@ export default function AboutSection() {
                 <p className="text-base md:text-lg lg:text-xl text-slate-300 leading-relaxed mt-4">
                   I specialize in <strong className="text-cyan-400">graphic design, video editing, professional document design, web and system development, programming, hardware troubleshooting, and computer repair</strong>. I have successfully completed over <strong className="text-yellow-400">1000 freelance projects</strong> for clients worldwide.
                 </p>
+              </div>
+
+              {/* Download Resume Button */}
+              <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-xl border border-green-500/30 rounded-xl md:rounded-2xl p-6 md:p-8 hover:from-green-500/20 hover:to-emerald-500/20 transition-all duration-300">
+                <div className="flex items-center justify-between flex-wrap gap-4">
+                  <div>
+                    <h4 className="text-lg md:text-xl font-bold text-white mb-2">Download My Resume</h4>
+                    <p className="text-sm md:text-base text-slate-300">Complete professional background & qualifications</p>
+                  </div>
+                  <button
+                    onClick={handleDownloadResume}
+                    className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl flex items-center gap-2 md:gap-3 transform hover:scale-105 transition-all shadow-2xl shadow-green-500/50 group"
+                  >
+                    <Download className="w-5 h-5 md:w-6 md:h-6 group-hover:animate-bounce" />
+                    <span className="text-sm md:text-base">Download Resume</span>
+                  </button>
+                </div>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
