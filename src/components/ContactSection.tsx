@@ -72,12 +72,23 @@ export default function ContactSection() {
       return;
     }
 
-    const whatsappMessage = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\nBudget: ${formData.budget}\n\nMessage: ${formData.message}`
-    );
+    // Prepare message for WhatsApp and Email
+    const whatsappMessage = `*New Project Inquiry*%0A%0A` +
+      `*Name:* ${formData.name}%0A` +
+      `*Email:* ${formData.email}%0A` +
+      `*Phone:* ${formData.phone || "Not provided"}%0A` +
+      `*Service:* ${formData.service}%0A` +
+      `*Budget:* ${formData.budget || "Not specified"}%0A%0A` +
+      `*Project Details:*%0A${formData.message}`;
 
-    const emailSubject = `New Project Inquiry from ${formData.name}`;
-    const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService Interested: ${formData.service}\nBudget Range: ${formData.budget}\n\nProject Details:\n${formData.message}`;
+    // Email subject and body
+    const emailSubject = `Project Inquiry: ${formData.service} - ${formData.name}`;
+    const emailBody = `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone || "Not provided"}\n` +
+      `Service: ${formData.service}\n` +
+      `Budget: ${formData.budget || "Not specified"}\n\n` +
+      `Project Details:\n${formData.message}`;
 
     // Send to WhatsApp
     window.open(`https://wa.me/254727492545?text=${whatsappMessage}`, "_blank");
