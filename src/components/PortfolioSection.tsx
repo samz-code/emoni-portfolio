@@ -235,11 +235,43 @@ const portfolioData = {
     color: "from-cyan-500 to-blue-500",
     subcategories: {
       "Websites": [
-        { title: "Capepcy Hardware", client: "Hardware Store", description: "Full e-commerce website with inventory management", impact: "200% online sales increase", liveLink: "https://www.capepcyhardware.co.ke", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=512&h=512&fit=crop" },
-        { title: "Turkana County Website", client: "County Government", description: "Government portal with service delivery features", impact: "Improved citizen access to services", liveLink: "#", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=512&h=512&fit=crop" },
-        { title: "Axis Africa Safaris", client: "Tourism Company", description: "Safari booking platform with tour packages", impact: "150% booking increase", liveLink: "https://axisafricasafaris.com/", image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=512&h=512&fit=crop" },
-        { title: "Hyrax Safaris", client: "Safari Operator", description: "Premium safari experience website", impact: "Enhanced brand positioning", liveLink: "https://hyraxsafaris.com/", image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=512&h=512&fit=crop" },
-        { title: "Emoni Samuel Portfolio", client: "Personal Brand", description: "Professional portfolio showcasing skills", impact: "Attracted premium clients", liveLink: "https://www.emonisamuel.co.ke", image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=512&h=512&fit=crop" }
+        { title: "Capepcy Hardware", 
+          client: "Hardware Store", 
+          description: "Full e-commerce website with inventory management", 
+          impact: "200% online sales increase", 
+          liveLink: "https://www.capepcyhardware.co.ke", 
+         image: "/assets/posters/capepcy.jpg",
+        },
+
+        { title: "Turkana County Website", 
+          client: "County Government", 
+          description: "Government portal with service delivery features", 
+          impact: "Improved citizen access to services", 
+          liveLink: "https://turkana.go.ke/", 
+          image: "/assets/posters/turkana.jpg",
+        },
+
+        { title: "Axis Africa Safaris", 
+          client: "Tourism Company", 
+          description: "Safari booking platform with tour packages", 
+          impact: "150% booking increase", 
+          liveLink: "https://axisafricasafaris.com/", 
+          image: "/assets/posters/axis.jpg",
+        },
+
+        { title: "Hyrax Safaris", 
+          client: "Safari Operator", 
+          description: "Premium safari experience website", 
+          impact: "Enhanced brand positioning", liveLink: "https://hyraxsafaris.com/", 
+          image: "/assets/posters/hyrax.jpg"
+         },
+
+        { title: "Emoni Samuel Portfolio", 
+          client: "Personal Brand", 
+          description: "Professional portfolio showcasing skills", 
+          impact: "Attracted premium clients", liveLink: "https://www.emonisamuel.co.ke", 
+          image: "/assets/posters/emoni.jpg"
+        },
       ]
     }
   }
