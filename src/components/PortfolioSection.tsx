@@ -76,21 +76,21 @@ const portfolioData = {
   description: "Futuristic logo expressing innovation and scalability",
   impact: "Positioned brand as a tech leader",
   image: "/assets/Logos/logo10.jpg",
-}
+},
 {
   title: "Orbit Tech",
   client: "IT Solutions Company",
   description: "Futuristic logo expressing innovation and scalability",
   impact: "Positioned brand as a tech leader",
   image: "/assets/Logos/logo11.jpg",
-}
+},
 {
   title: "Orbit Tech",
   client: "IT Solutions Company",
   description: "Futuristic logo expressing innovation and scalability",
   impact: "Positioned brand as a tech leader",
   image: "/assets/Logos/logo12.jpg",
-}
+},
 {
   title: "Orbit Tech",
   client: "IT Solutions Company",
