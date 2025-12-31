@@ -1,96 +1,83 @@
 import { useState } from "react";
-import { Palette, Monitor, Video, FileText, Code, Wrench, ArrowRight, Sparkles, Zap, Layout, Image, Globe, Smartphone, Film, Scissors, FileType, FileSpreadsheet, Presentation, Database, Server, Cloud, Cpu, HardDrive, Settings, Wifi, Network, Share2, Router, CheckCircle2, Star, TrendingUp } from "lucide-react";
+import { Palette, Monitor, Video, Code, Wrench, ArrowRight, Sparkles, Zap, Layout, CheckCircle2, Star, TrendingUp } from "lucide-react";
 
 const services = [
   {
-    category: "Graphic Design",
+    category: "Design & Branding",
     icon: Palette,
     color: "from-pink-500 to-rose-500",
     bgColor: "from-pink-500/20 to-rose-500/10",
     popular: true,
     items: [
-      { title: "Logo Design", description: "Unique, creative, and brand-focused logos that make you stand out.", icon: Sparkles },
-      { title: "Posters & Flyers", description: "Eye-catching marketing materials for events and promotions.", icon: Layout },
-      { title: "Banners & Templates", description: "Professional designs for social media, web, and print.", icon: Image },
-      { title: "Branding Identity", description: "Complete brand kits with logos, colors, typography, and mockups.", icon: Zap }
+      "Logo Design & Brand Identity",
+      "Marketing Materials (Posters, Flyers, Banners)",
+      "Social Media Graphics & Templates",
+      "Professional Documents & Presentations"
     ]
   },
   {
-    category: "Web Design & Development",
+    category: "Web Development",
     icon: Monitor,
     color: "from-purple-500 to-violet-500",
     bgColor: "from-purple-500/20 to-violet-500/10",
     popular: true,
     items: [
-      { title: "Responsive Web Design", description: "Modern, mobile-friendly websites that look great everywhere.", icon: Smartphone },
-      { title: "WordPress Websites", description: "Fast, flexible, and easy-to-manage WordPress solutions.", icon: Globe },
-      { title: "Custom Web Applications", description: "Tailored web apps with unique features for your business.", icon: Code },
-      { title: "UI/UX Design", description: "User-friendly and engaging interfaces that convert.", icon: Layout }
+      "Responsive Website Design",
+      "WordPress Development",
+      "Custom Web Applications",
+      "UI/UX Design & Prototyping"
     ]
   },
   {
-    category: "Video Editing",
-    icon: Video,
-    color: "from-red-500 to-orange-500",
-    bgColor: "from-red-500/20 to-orange-500/10",
-    popular: false,
-    items: [
-      { title: "Professional Video Editing", description: "High-quality video production and post-production services.", icon: Film },
-      { title: "Promotional Videos", description: "Engaging marketing videos for social media and ads.", icon: Zap },
-      { title: "Motion Graphics", description: "Animated graphics and effects to enhance your content.", icon: Sparkles },
-      { title: "Video Color Grading", description: "Professional color correction and cinematic looks.", icon: Scissors }
-    ]
-  },
-  {
-    category: "Document Design",
-    icon: FileText,
-    color: "from-green-500 to-emerald-500",
-    bgColor: "from-green-500/20 to-emerald-500/10",
-    popular: false,
-    items: [
-      { title: "Professional Reports", description: "Beautifully formatted business reports and documents.", icon: FileType },
-      { title: "Proposals & Presentations", description: "Impressive proposals and PowerPoint presentations.", icon: Presentation },
-      { title: "Resume & CV Design", description: "Eye-catching resumes that get you noticed.", icon: FileText },
-      { title: "Document Templates", description: "Custom templates for consistent professional documents.", icon: FileSpreadsheet }
-    ]
-  },
-  {
-    category: "System Development & Programming",
+    category: "Software & Systems",
     icon: Code,
     color: "from-indigo-500 to-blue-500",
     bgColor: "from-indigo-500/20 to-blue-500/10",
     popular: true,
     items: [
-      { title: "Custom Software Solutions", description: "Tailored applications built for your specific needs.", icon: Cloud },
-      { title: "Web Applications", description: "Full-stack web apps using modern technologies.", icon: Globe },
-      { title: "API Development", description: "RESTful APIs and backend systems.", icon: Server },
-      { title: "Database Design", description: "Efficient database architecture and optimization.", icon: Database }
+      "Custom Software Development",
+      "API Development & Integration",
+      "Database Design & Optimization",
+      "System Architecture & Consultation"
     ]
   },
   {
-    category: "Hardware & Technical Support",
-    icon: Wrench,
-    color: "from-yellow-500 to-amber-500",
-    bgColor: "from-yellow-500/20 to-amber-500/10",
+    category: "Video Production",
+    icon: Video,
+    color: "from-red-500 to-orange-500",
+    bgColor: "from-red-500/20 to-orange-500/10",
     popular: false,
     items: [
-      { title: "Hardware Troubleshooting", description: "Expert diagnosis and problem-solving for computer issues.", icon: Settings },
-      { title: "Computer Repair", description: "Professional hardware maintenance, upgrades, and repairs.", icon: Cpu },
-      { title: "System Setup", description: "Complete computer setup and configuration services.", icon: HardDrive },
-      { title: "Technical Consultation", description: "Expert advice on hardware purchases and upgrades.", icon: Wrench }
+      "Video Editing & Post-Production",
+      "Promotional & Marketing Videos",
+      "Motion Graphics & Animation",
+      "Color Grading & Effects"
     ]
   },
-  {
-    category: "Networking Solutions",
-    icon: Network,
+{
+  category: "Technical Support",
+  icon: Wrench,
+  color: "from-yellow-500 to-amber-500",
+  bgColor: "from-yellow-500/20 to-amber-500/10",
+  popular: false,
+  items: [
+    "Hardware Repair & Upgrades",
+    "System Setup & Configuration",
+    "Network Installation & Security",
+    "Technical Troubleshooting & Support"
+  ]
+},
+{
+  category: "IT Consultation & Training",
+    icon: Sparkles,
     color: "from-cyan-500 to-teal-500",
     bgColor: "from-cyan-500/20 to-teal-500/10",
     popular: false,
     items: [
-      { title: "Network Setup & Configuration", description: "Professional network installation and configuration for homes and offices.", icon: Router },
-      { title: "Network Troubleshooting", description: "Diagnose and resolve connectivity and performance issues.", icon: Wifi },
-      { title: "Network Security", description: "Secure your network with firewalls, VPNs, and best practices.", icon: Share2 },
-      { title: "Network Optimization", description: "Improve speed, reliability, and coverage of your network.", icon: Network }
+      "Technology Strategy & Planning",
+      "Software & Tools Recommendations",
+      "Team Training & Workshops",
+      "Digital Transformation Support"
     ]
   }
 ];
@@ -146,7 +133,6 @@ export default function ServicesSection() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
             {services.map((service, idx) => {
               const Icon = service.icon;
-              const isExpanded = selectedCategory === idx;
               
               return (
                 <div 
@@ -184,48 +170,19 @@ export default function ServicesSection() {
                     </div>
 
                     {/* Services List */}
-                    <div className="p-6 space-y-3">
-                      {service.items.slice(0, isExpanded ? service.items.length : 3).map((item, index) => {
-                        const ItemIcon = item.icon;
-                        return (
-                          <div 
-                            key={index} 
-                            className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 hover:border-white/30 transition-all group/item cursor-pointer"
-                          >
-                            <div className="flex items-start gap-3">
-                              <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center flex-shrink-0 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all`}>
-                                <ItemIcon className="w-5 h-5 text-white" />
-                              </div>
-                              <div className="flex-1">
-                                <h4 className="font-bold text-white mb-1 group-hover/item:text-indigo-400 transition-colors text-sm md:text-base">{item.title}</h4>
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      })}
-
-                      {/* Expand/Collapse Button */}
-                      {service.items.length > 3 && (
-                        <button
-                          onClick={() => setSelectedCategory(isExpanded ? null : idx)}
-                          className="w-full bg-white/5 border border-white/10 rounded-xl p-3 hover:bg-white/10 hover:border-white/30 transition-all text-white font-semibold flex items-center justify-center gap-2"
+                    <div className="p-6 space-y-2">
+                      {service.items.map((item, index) => (
+                        <div 
+                          key={index} 
+                          className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors py-2 group/item"
                         >
-                          {isExpanded ? "Show Less" : `Show ${service.items.length - 3} More`}
-                          <ArrowRight className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
-                        </button>
-                      )}
+                          <div className={`w-2 h-2 rounded-full bg-gradient-to-br ${service.color} flex-shrink-0 group-hover/item:scale-150 transition-all`} />
+                          <span className="text-sm md:text-base">{item}</span>
+                        </div>
+                      ))}
                     </div>
 
-                    {/* Footer */}
-                    <div className="p-6 pt-0">
-                      <button
-                        onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                        className={`w-full bg-gradient-to-r ${service.color} hover:opacity-90 text-white font-bold py-3 rounded-xl transition-all hover:scale-105 shadow-xl flex items-center justify-center gap-2`}
-                      >
-                        Get Started
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                    </div>
+              
 
                     {/* Corner Decoration */}
                     <div className="absolute top-4 right-4 w-20 h-20 opacity-5 group-hover:opacity-10 transition-opacity duration-500">

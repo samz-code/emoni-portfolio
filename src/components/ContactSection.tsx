@@ -56,7 +56,47 @@ export default function ContactSection() {
     return () => clearInterval(interval);
   }, []);
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Validate required fields
+    if (!formData.name.trim() || !formData.email.trim() || !formData.service || !formData.message.trim()) {
+      alert("Please fill in all required fields (Name, Email, Service, and Project Details)");
+      return;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address");
+      return;
+    }
+
+    // Prepare message for WhatsApp and Email
+    const whatsappMessage = `*New Project Inquiry*%0A%0A` +
+      `*Name:* ${formData.name}%0A` +
+      `*Email:* ${formData.email}%0A` +
+      `*Phone:* ${formData.phone || "Not provided"}%0A` +
+      `*Service:* ${formData.service}%0A` +
+      `*Budget:* ${formData.budget || "Not specified"}%0A%0A` +
+      `*Project Details:*%0A${formData.message}`;
+
+    // Email subject and body
+    const emailSubject = `Project Inquiry: ${formData.service} - ${formData.name}`;
+    const emailBody = `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone || "Not provided"}\n` +
+      `Service: ${formData.service}\n` +
+      `Budget: ${formData.budget || "Not specified"}\n\n` +
+      `Project Details:\n${formData.message}`;
+
+    // Send to WhatsApp
+    window.open(`https://wa.me/254727492545?text=${whatsappMessage}`, "_blank");
+
+    // Send to Email (opens default email client)
+    window.location.href = `mailto:emonisamuel54@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+    // Show success message
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -128,7 +168,7 @@ export default function ContactSection() {
                       <span className="font-semibold text-white text-sm md:text-base">+254 727 492 545</span>
                     </div>
                   </a>
-                  <a href="mailto:samuelemoni18@gmail.com" className="flex items-center gap-3 group">
+                  <a href="mailto:emonisamuel54@gmail.com" className="flex items-center gap-3 group">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
                       <Mail className="w-5 h-5 text-white" />
                     </div>
@@ -162,7 +202,7 @@ export default function ContactSection() {
                   </button>
                   <button 
                     className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-bold py-3 px-4 rounded-xl transition-all hover:scale-105 shadow-xl flex items-center justify-center gap-2"
-                    onClick={() => window.open("https://m.me/samuelemoni", "_blank")}
+                    onClick={() => window.open("https://m.me/Emoni Samuel", "_blank")}
                   >
                     <Send className="w-5 h-5" />
                     Messenger
@@ -176,14 +216,14 @@ export default function ContactSection() {
                 <div className="grid grid-cols-2 gap-3">
                   <button 
                     className="bg-white/10 border border-white/20 hover:bg-blue-600 hover:border-blue-600 text-white font-semibold py-2 px-3 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm"
-                    onClick={() => window.open("https://www.facebook.com/Samuel.Emoni", "_blank")}
+                    onClick={() => window.open("https://www.facebook.com/profile.php?id=61580678667530", "_blank")}
                   >
                     <Facebook className="w-4 h-4" />
                     Facebook
                   </button>
                   <button 
                     className="bg-white/10 border border-white/20 hover:bg-pink-600 hover:border-pink-600 text-white font-semibold py-2 px-3 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm"
-                    onClick={() => window.open("https://www.instagram.com/Sam_Emoni", "_blank")}
+                    onClick={() => window.open("https://www.instagram.com/Emoni_Samuel", "_blank")}
                   >
                     <Instagram className="w-4 h-4" />
                     Instagram
@@ -220,7 +260,7 @@ export default function ContactSection() {
                       <CheckCircle2 className="w-12 h-12 text-white" />
                     </div>
                     <h4 className="text-2xl font-bold text-white mb-2">Message Sent!</h4>
-                    <p className="text-slate-300">Thank you! I'll respond within 24 hours.</p>
+                    <p className="text-slate-300">Your inquiry has been sent via WhatsApp and Email. I'll respond within 24 hours.</p>
                   </div>
                 ) : (
                   <div className="space-y-6">
@@ -231,7 +271,7 @@ export default function ContactSection() {
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({...formData, name: e.target.value})}
-                          placeholder="John Doe"
+                          placeholder="Emoni Samuel"
                           className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/50 transition-all"
                         />
                       </div>
@@ -242,7 +282,7 @@ export default function ContactSection() {
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({...formData, email: e.target.value})}
-                          placeholder="john@example.com"
+                          placeholder="emoni@example.com"
                           className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/50 transition-all"
                         />
                       </div>

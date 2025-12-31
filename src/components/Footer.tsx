@@ -19,8 +19,8 @@ export default function Footer() {
 
   const handleSocialClick = (platform) => {
     const links = {
-      facebook: "https://www.facebook.com/Samuel.Emoni",
-      instagram: "https://www.instagram.com/Sam_Emoni",
+      facebook: "https://www.facebook.com/profile.php?id=61580678667530",
+      instagram: "https://www.instagram.com/Emoni_Samuel",
       linkedin: "https://www.linkedin.com/in/samuelemoni/",
       tiktok: "https://www.tiktok.com/@sam_e254"
     };
