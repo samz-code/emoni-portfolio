@@ -194,38 +194,6 @@ export default function ServicesSection() {
             })}
           </div>
 
-          {/* Process Timeline */}
-          <div className="mb-12 md:mb-16 px-4">
-            <h3 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6 text-center text-white">
-              How <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">It Works</span>
-            </h3>
-            <p className="text-center text-slate-300 mb-8 md:mb-12 max-w-3xl mx-auto text-sm md:text-base lg:text-lg">
-              Simple process from start to finish
-            </p>
-
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {[
-                { step: "01", title: "Consultation", icon: Sparkles, color: "from-blue-500 to-cyan-500" },
-                { step: "02", title: "Planning", icon: Layout, color: "from-purple-500 to-pink-500" },
-                { step: "03", title: "Creation", icon: Zap, color: "from-orange-500 to-red-500" },
-                { step: "04", title: "Delivery", icon: CheckCircle2, color: "from-green-500 to-emerald-500" }
-              ].map((process, i) => (
-                <div key={i} className="relative group">
-                  <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl md:rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-white/30 transition-all hover:-translate-y-2 h-full">
-                    <div className={`w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-to-br ${process.color} flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all shadow-2xl`}>
-                      <process.icon className="w-7 h-7 md:w-8 md:h-8 text-white" />
-                    </div>
-                    <div className="text-4xl md:text-5xl font-black text-white/10 mb-2">{process.step}</div>
-                    <h4 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">{process.title}</h4>
-                  </div>
-                  {i < 3 && (
-                    <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-1 bg-gradient-to-r from-white/20 to-transparent" />
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* CTA Section */}
           <div className="text-center px-4">
             <div className="relative bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl md:rounded-3xl p-8 md:p-12 lg:p-16 border border-white/20 backdrop-blur-xl overflow-hidden shadow-2xl">
