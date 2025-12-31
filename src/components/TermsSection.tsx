@@ -110,67 +110,6 @@ export default function TermsSection() {
             })}
           </div>
 
-          {/* Full Terms Document Card */}
-          <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden shadow-2xl mb-16 md:mb-20">
-            <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border-b border-white/10 p-6 md:p-8">
-              <div className="flex items-center gap-3">
-                <FileText className="w-6 h-6 text-indigo-400" />
-                <h3 className="text-2xl md:text-3xl font-black text-white">Key Terms Summary</h3>
-              </div>
-            </div>
-            
-            <div className="p-6 md:p-8 space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-bold text-lg mb-3 text-white flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-purple-400" />
-                    Project Process
-                  </h4>
-                  <p className="text-sm text-slate-300 leading-relaxed">
-                    Scope documented in writing before work begins. Timeline established during consultation. Payment releases files and grants full usage rights. Client provides materials and feedback promptly.
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-lg mb-3 text-white flex items-center gap-2">
-                    <Shield className="w-5 h-5 text-green-400" />
-                    Your Protection
-                  </h4>
-                  <p className="text-sm text-slate-300 leading-relaxed">
-                    Strict confidentiality maintained. NDAs available free for sensitive projects. Data not shared with third parties. Professional quality guaranteed with revision rights.
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-lg mb-3 text-white flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-yellow-400" />
-                    Termination & Disputes
-                  </h4>
-                  <p className="text-sm text-slate-300 leading-relaxed">
-                    Either party may terminate with 7 days notice. Good-faith discussion for disputes. Deposits non-refundable but credited to work. Force majeure extends timelines.
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-lg mb-3 text-white flex items-center gap-2">
-                    <AlertCircle className="w-5 h-5 text-orange-400" />
-                    Liability & Warranty
-                  </h4>
-                  <p className="text-sm text-slate-300 leading-relaxed">
-                    Services provided "as is" with quality guarantee. 30-day web functionality warranty. Liability limited to project payment amount. Client owns all provided content legally.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="pt-6 border-t border-white/10">
-                <p className="text-sm text-slate-400 text-center">
-                  By making payment or signing agreement, you acknowledge reading and accepting these terms. 
-                  Terms governed by Kenyan law. Contact for questions or clarifications.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Thank You Card */}
           <div className="relative bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl p-12 md:p-16 border border-white/20 backdrop-blur-xl overflow-hidden shadow-2xl">
             {/* Animated Background Icons */}
