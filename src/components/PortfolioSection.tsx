@@ -100,9 +100,13 @@ const portfolioData = {
 }
     ],
       "Posters & Flyers": [
-        { title: "Tech Conference 2024", client: "Technology Event", description: "Bold geometric design for innovation summit", impact: "2,000+ attendees attracted", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=512&h=512&fit=crop" },
-        { title: "Summer Music Festival", client: "Entertainment Promoter", description: "Vibrant poster with artist lineup", impact: "5,000+ tickets sold", image: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=512&h=512&fit=crop" },
-        { title: "Charity Gala Night", client: "Non-Profit Organization", description: "Elegant invitation design", impact: "$50,000 raised for charity", image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=512&h=512&fit=crop" }
+        {
+  title: "ThanksGiving Invitation Poster",
+  client: "Private Client",
+  description: "Warm and inviting poster design for Thanksgiving event",
+  impact:"More than 4000 attendees",
+  image: "/assets/posters/sylvia.jpg",
+}
       ],
       "Product Packaging": [
         { title: "Coffee Roasters Pack", client: "Elevation Coffee", description: "Premium packaging with brand colors", impact: "40% increase in shelf appeal", image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=512&h=512&fit=crop" },
