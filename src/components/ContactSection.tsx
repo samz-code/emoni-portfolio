@@ -72,23 +72,12 @@ export default function ContactSection() {
       return;
     }
 
-    // Prepare message for WhatsApp and Email
-    const whatsappMessage = `*New Project Inquiry*%0A%0A` +
-      `*Name:* ${formData.name}%0A` +
-      `*Email:* ${formData.email}%0A` +
-      `*Phone:* ${formData.phone || "Not provided"}%0A` +
-      `*Service:* ${formData.service}%0A` +
-      `*Budget:* ${formData.budget || "Not specified"}%0A%0A` +
-      `*Project Details:*%0A${formData.message}`;
+    const whatsappMessage = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\nBudget: ${formData.budget}\n\nMessage: ${formData.message}`
+    );
 
-    // Email subject and body
-    const emailSubject = `Project Inquiry: ${formData.service} - ${formData.name}`;
-    const emailBody = `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone || "Not provided"}\n` +
-      `Service: ${formData.service}\n` +
-      `Budget: ${formData.budget || "Not specified"}\n\n` +
-      `Project Details:\n${formData.message}`;
+    const emailSubject = `New Project Inquiry from ${formData.name}`;
+    const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService Interested: ${formData.service}\nBudget Range: ${formData.budget}\n\nProject Details:\n${formData.message}`;
 
     // Send to WhatsApp
     window.open(`https://wa.me/254727492545?text=${whatsappMessage}`, "_blank");
@@ -363,28 +352,6 @@ export default function ContactSection() {
                   </div>
                 )}
               </div>
-            </div>
-          </div>
-
-          {/* Google Forms CTA */}
-          <div className="mt-12 md:mt-16 relative bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl md:rounded-3xl p-8 md:p-12 border border-white/20 backdrop-blur-xl overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 overflow-hidden opacity-5">
-              <Sparkles className="absolute top-10 left-10 w-16 h-16 animate-pulse" />
-              <Globe className="absolute bottom-10 right-10 w-16 h-16 animate-pulse" style={{ animationDelay: '1s' }} />
-            </div>
-            <div className="relative z-10 text-center">
-              <Sparkles className="w-10 h-10 md:w-12 md:h-12 text-yellow-400 mx-auto mb-4 animate-pulse" />
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-black mb-3 md:mb-4 text-white">Prefer a Detailed Booking Form?</h3>
-              <p className="text-slate-300 mb-6 md:mb-8 max-w-2xl mx-auto text-sm md:text-base lg:text-lg">
-                Fill out our comprehensive project booking form with more detailed options and upload multiple files
-              </p>
-              <button 
-                className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 text-white text-base md:text-lg font-bold px-8 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl transition-all hover:scale-105 shadow-2xl shadow-purple-500/50 inline-flex items-center gap-2"
-                onClick={() => window.open("https://forms.google.com/", "_blank")}
-              >
-                <Globe className="w-5 h-5 md:w-6 md:h-6" />
-                Open Detailed Booking Form
-              </button>
             </div>
           </div>
         </div>
