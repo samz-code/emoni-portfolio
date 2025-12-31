@@ -1,112 +1,175 @@
 import { useState } from "react";
-import { Search, ExternalLink, Globe, Image, Palette, Video, Code, Package, Mail, Megaphone, UtensilsCrossed, Play, FileImage, Award, TrendingUp, X } from "lucide-react";
+import { Search, ExternalLink, Globe, Palette, Video, Megaphone, Award, TrendingUp, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const portfolioData = {
   "Graphic Design": {
     icon: Palette,
     color: "from-pink-500 to-rose-500",
     subcategories: {
-    "Logo": [
-{
-  title: "Tonwin Smartec Limited",
-  client: "Construction Technology Company",
-  description: "Modern, sleek logo with tech and construction elements",
-  impact: "Enhanced brand recognition by 80%",
-  image: "/assets/logos/logo1.jpg",
-},
-{
-  title: "NeuroUni",
-  client: "Innovative tech Startup",
-  description: "Futuristic logo symbolizing connectivity and intelligence",
-  impact: "Increased investor interest",
-  image: "/assets/logos/logo2.jpg",
-},
-{
-  title: "Shawamu Foundation",
-  client: "Women Empowerment NGO",
-  description: "Elegant and empowering logo with feminine motifs",
-  impact: "Boosted donor engagement",
-  image: "/assets/logos/logo3.jpg",
-},
-{
-  title: "Turi",
-  client: "Digital marketing Agency",
-  description: "Vibrant and dynamic star like logo reflecting creativity",
-  impact: "First client acquisition success",
-  image: "/assets/logos/logo4.jpg",
-},
-{
-  title: "Together Humanity",
-  client: "NGO focused to help the less fortunate",
-  description: "Unity-themed logo with warm colors",
-  impact: "Strengthened community presence",
-  image: "/assets/logos/logo5.jpg",
-},
-{
-  title: "Mama's Kitchen",
-  client: "Restaurant & Food Delivery brand",
-  description: "chef hat and spoon logo evoking home-cooked meals",
-  impact: "Increased local customer base",
-  image: "/assets/logos/logo6.jpg",
-},
-{
-  title: "MobileTek",
-  client: "Company that sells mobile phones and accessories in bulk",
-  description: "Mobile wordmark with sleek, tech-inspired font",
-  impact: "Boosted B2B sales inquiries",
-  image: "/assets/logos/logo7.jpg",
-},
-{
-  title: "MohSam Spa & Salon",
-  client: "Beauty and wellness center",
-  description: "Soothing logo with floral creatively integrated",
-  impact: "Improved patient confidence",
-  image: "/assets/logos/logo8.jpg",
-},
-{
-  title: "Mohsam Premium Jewellery Store",
-  client: "Luxury Jewelry Brand",
-  description: "Opulent logo with gem and crown elements",
-  impact: "Elevated brand prestige",
-  image: "/assets/logos/logo9.jpg",
-},
-{
-  title: "Elevate Marketing",
-  client: "Digital Marketing Agency",
-  description: "Futuristic logo expressing innovation and scalability",
-  impact: "Positioned brand as a tech leader",
-  image: "/assets/logos/logo10.jpg",
-},
-{
-  title: "Eunishar Home & Support Solution",
-  client: "Company that offers home cleaning and support services",
-  description: "Wordmark logo with sleek, tech-inspired font",
-  impact: "Boosted B2B sales inquiries",
-  image: "/assets/logos/logo11.jpg",
-},
-{
-  title: "Click2Skill",
-  client: "Skills Development Platform",
-  description: "Futuristic logo expressing innovation and scalability",
-  impact: "Enhanced platform credibility",
-  image: "/assets/logos/logo12.jpg",
-},
-{
-  title: "Flowmax Plumbing Solutions Ltd",
-  client: "Plumbing Services Company",
-  description: "Futuristic logo expressing innovation and scalability",
-  impact: "Increased service bookings",
-  image: "/assets/logos/logo13.jpg",
-}
-    ],
+      "Logo": [
+        {
+          title: "Tonwin Smartec Limited",
+          client: "Construction Technology Company",
+          description: "Modern, sleek logo with tech and construction elements",
+          impact: "Enhanced brand recognition by 80%",
+          image: "/assets/logos/logo1.jpg",
+        },
+        {
+          title: "NeuroUni",
+          client: "Innovative tech Startup",
+          description: "Futuristic logo symbolizing connectivity and intelligence",
+          impact: "Increased investor interest",
+          image: "/assets/logos/logo2.jpg",
+        },
+        {
+          title: "Shawamu Foundation",
+          client: "Women Empowerment NGO",
+          description: "Elegant and empowering logo with feminine motifs",
+          impact: "Boosted donor engagement",
+          image: "/assets/logos/logo3.jpg",
+        },
+        {
+          title: "Turi",
+          client: "Digital marketing Agency",
+          description: "Vibrant and dynamic star like logo reflecting creativity",
+          impact: "First client acquisition success",
+          image: "/assets/logos/logo4.jpg",
+        },
+        {
+          title: "Together Humanity",
+          client: "NGO focused to help the less fortunate",
+          description: "Unity-themed logo with warm colors",
+          impact: "Strengthened community presence",
+          image: "/assets/logos/logo5.jpg",
+        },
+        {
+          title: "Mama's Kitchen",
+          client: "Restaurant & Food Delivery brand",
+          description: "chef hat and spoon logo evoking home-cooked meals",
+          impact: "Increased local customer base",
+          image: "/assets/logos/logo6.jpg",
+        },
+        {
+          title: "MobileTek",
+          client: "Company that sells mobile phones and accessories in bulk",
+          description: "Mobile wordmark with sleek, tech-inspired font",
+          impact: "Boosted B2B sales inquiries",
+          image: "/assets/logos/logo7.jpg",
+        },
+        {
+          title: "MohSam Spa & Salon",
+          client: "Beauty and wellness center",
+          description: "Soothing logo with floral creatively integrated",
+          impact: "Improved patient confidence",
+          image: "/assets/logos/logo8.jpg",
+        },
+        {
+          title: "Mohsam Premium Jewellery Store",
+          client: "Luxury Jewelry Brand",
+          description: "Opulent logo with gem and crown elements",
+          impact: "Elevated brand prestige",
+          image: "/assets/logos/logo9.jpg",
+        },
+        {
+          title: "Elevate Marketing",
+          client: "Digital Marketing Agency",
+          description: "Futuristic logo expressing innovation and scalability",
+          impact: "Positioned brand as a tech leader",
+          image: "/assets/logos/logo10.jpg",
+        },
+        {
+          title: "Eunishar Home & Support Solution",
+          client: "Company that offers home cleaning and support services",
+          description: "Wordmark logo with sleek, tech-inspired font",
+          impact: "Boosted B2B sales inquiries",
+          image: "/assets/logos/logo11.jpg",
+        },
+        {
+          title: "Click2Skill",
+          client: "Skills Development Platform",
+          description: "Futuristic logo expressing innovation and scalability",
+          impact: "Enhanced platform credibility",
+          image: "/assets/logos/logo12.jpg",
+        },
+        {
+          title: "Flowmax Plumbing Solutions Ltd",
+          client: "Plumbing Services Company",
+          description: "Futuristic logo expressing innovation and scalability",
+          impact: "Increased service bookings",
+          image: "/assets/logos/logo13.jpg",
+        }
+      ],
       "Posters & Flyers": [
         {
-  title: "ThanksGiving Invitation Poster",
-  client: "Private Client",
-  description: "Warm and inviting poster design for Thanksgiving event",
-  impact:"More than 4000 attendees",
-  image: "/assets/posters/sylvia.jpg",
-}
+          title: "ThanksGiving Invitation Poster",
+          client: "Private Client",
+          description: "Warm and inviting poster design for Thanksgiving event",
+          impact: "More than 4000 attendees",
+          image: "/assets/posters/sylvia.jpg",
+        },
+        {
+          title: "Summer Music Festival Flyer",
+          client: "City Events Committee",
+          description: "Vibrant and energetic flyer capturing the essence of summer concerts",
+          impact: "Sold out event in 3 days",
+          image: "/assets/posters/poster2.jpg",
+        },
+        {
+          title: "Corporate Conference Poster",
+          client: "Tech Solutions Inc",
+          description: "Professional and modern design for annual business summit",
+          impact: "500+ registrations achieved",
+          image: "/assets/posters/poster3.jpg",
+        },
+        {
+          title: "Charity Fundraiser Flyer",
+          client: "Hope Foundation",
+          description: "Compassionate design highlighting the cause and event details",
+          impact: "$50K raised for the cause",
+          image: "/assets/posters/poster4.jpg",
+        },
+        {
+          title: "Grand Opening Poster",
+          client: "Urban Cafe",
+          description: "Eye-catching design to announce new restaurant opening",
+          impact: "300+ customers on opening day",
+          image: "/assets/posters/poster5.jpg",
+        },
+        {
+          title: "Art Exhibition Flyer",
+          client: "Gallery Modern",
+          description: "Elegant and artistic design for contemporary art showcase",
+          impact: "Record gallery attendance",
+          image: "/assets/posters/poster6.jpg",
+        },
+        {
+          title: "Sports Tournament Poster",
+          client: "Community Sports League",
+          description: "Dynamic and bold design for basketball championship",
+          impact: "All teams registered within 1 week",
+          image: "/assets/posters/poster7.jpg",
+        },
+        {
+          title: "Wedding Invitation Flyer",
+          client: "The Johnsons",
+          description: "Romantic and personalized design for special celebration",
+          impact: "200 guests confirmed attendance",
+          image: "/assets/posters/poster8.jpg",
+        },
+        {
+          title: "Product Launch Poster",
+          client: "Innovation Labs",
+          description: "Sleek and futuristic design for tech product reveal",
+          impact: "1000+ pre-orders secured",
+          image: "/assets/posters/poster9.jpg",
+        },
+        {
+          title: "Educational Workshop Flyer",
+          client: "Learning Center",
+          description: "Informative and approachable design for community workshop",
+          impact: "Full capacity enrollment reached",
+          image: "/assets/posters/poster10.jpg",
+        },
       ],
       "Product Packaging": [
         { title: "Coffee Roasters Pack", client: "Elevation Coffee", description: "Premium packaging with brand colors", impact: "40% increase in shelf appeal", image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=512&h=512&fit=crop" },
@@ -182,37 +245,155 @@ const portfolioData = {
   }
 };
 
+function CarouselView({ projects, subcategory, color, icon: Icon }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % projects.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length);
+  };
+
+  const currentProject = projects[currentSlide];
+
+  return (
+    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden">
+      {/* Carousel Image */}
+      <div className="relative h-96 bg-gradient-to-br from-slate-800 to-slate-900">
+        <img 
+          src={currentProject.image} 
+          alt={currentProject.title}
+          className="w-full h-full object-cover"
+        />
+        
+        {/* Category Badge */}
+        <div className="absolute top-4 left-4">
+          <div className={`bg-gradient-to-r ${color} text-white text-sm font-bold px-4 py-2 rounded-full shadow-2xl flex items-center gap-2`}>
+            <Icon className="w-4 h-4" />
+            {subcategory}
+          </div>
+        </div>
+
+        {/* Live Link Badge */}
+        {currentProject.liveLink && (
+          <div className="absolute top-4 right-4">
+            <div className="bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-full shadow-2xl flex items-center gap-1">
+              <Globe className="w-4 h-4" />
+              Live
+            </div>
+          </div>
+        )}
+
+        {/* Navigation Arrows */}
+        {projects.length > 1 && (
+          <>
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-800" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+            >
+              <ChevronRight className="w-6 h-6 text-gray-800" />
+            </button>
+          </>
+        )}
+
+        {/* Slide Counter */}
+        <div className="absolute bottom-4 right-4 bg-black/70 text-white text-sm font-bold px-4 py-2 rounded-full">
+          {currentSlide + 1} / {projects.length}
+        </div>
+      </div>
+
+      {/* Project Details */}
+      <div className="p-6">
+        <h3 className="text-2xl font-bold text-white mb-2">{currentProject.title}</h3>
+        <p className="text-indigo-400 font-semibold mb-3">{currentProject.client}</p>
+        <p className="text-slate-300 mb-4">{currentProject.description}</p>
+        
+        {/* Impact Badge */}
+        <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-lg px-4 py-3 mb-4">
+          <div className="flex items-center gap-2">
+            <TrendingUp className="w-4 h-4 text-green-400 flex-shrink-0" />
+            <p className="text-green-400 font-semibold">{currentProject.impact}</p>
+          </div>
+        </div>
+
+        {/* Platform (for videos) */}
+        {currentProject.platform && (
+          <div className="bg-white/5 rounded-lg px-4 py-2 mb-4">
+            <p className="text-slate-400 text-sm">Platform: <span className="text-white font-semibold">{currentProject.platform}</span></p>
+          </div>
+        )}
+
+        {/* Live Link Button */}
+        {currentProject.liveLink && (
+          <button
+            onClick={() => window.open(currentProject.liveLink, "_blank")}
+            className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-all"
+          >
+            <ExternalLink className="w-5 h-5" />
+            Visit Live Website
+          </button>
+        )}
+
+        {/* Dot Navigation */}
+        {projects.length > 1 && (
+          <div className="flex justify-center gap-2 mt-6">
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`transition-all ${
+                  index === currentSlide
+                    ? 'bg-purple-600 w-8 h-2'
+                    : 'bg-white/20 hover:bg-white/40 w-2 h-2'
+                } rounded-full`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function PortfolioSection() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [expandedSubcategory, setExpandedSubcategory] = useState(null);
 
   const categories = ["All", ...Object.keys(portfolioData)];
 
-  const filterProjects = () => {
+  const filterSubcategories = () => {
     let filtered = [];
     
     Object.entries(portfolioData).forEach(([category, data]) => {
       if (selectedCategory === "All" || selectedCategory === category) {
         Object.entries(data.subcategories).forEach(([subcat, projects]) => {
-          projects.forEach(project => {
-            const matchesSearch = 
-              project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              project.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              subcat.toLowerCase().includes(searchQuery.toLowerCase());
-            
-            if (matchesSearch) {
-              filtered.push({
-                ...project,
-                category,
-                subcategory: subcat,
-                icon: data.icon,
-                color: data.color
-              });
-            }
-          });
+          const matchesSearch = projects.some(project =>
+            project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            project.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            subcat.toLowerCase().includes(searchQuery.toLowerCase())
+          );
+          
+          if (matchesSearch) {
+            filtered.push({
+              category,
+              subcategory: subcat,
+              projects,
+              icon: data.icon,
+              color: data.color,
+              totalProjects: projects.length
+            });
+          }
         });
       }
     });
@@ -220,12 +401,10 @@ export default function PortfolioSection() {
     return filtered;
   };
 
-  const filteredProjects = filterProjects();
+  const filteredSubcategories = filterSubcategories();
 
   return (
     <section id="portfolio" className="py-12 md:py-20 lg:py-32 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 overflow-hidden relative">
-      
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -238,7 +417,7 @@ export default function PortfolioSection() {
               My <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Portfolio</span>
             </h2>
             <p className="text-base md:text-xl text-slate-300 max-w-3xl mx-auto mb-8 md:mb-12">
-              Explore 100+ successful projects across design, development, and digital solutions
+              Explore successful projects across design, development, and digital solutions with carousel view
             </p>
 
             {/* Search Bar */}
@@ -273,68 +452,51 @@ export default function PortfolioSection() {
             </div>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-            {filteredProjects.map((project, index) => {
-              const Icon = project.icon;
+          {/* Subcategories Grid */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {filteredSubcategories.map((item, index) => {
+              const Icon = item.icon;
+              const isExpanded = expandedSubcategory === `${item.category}-${item.subcategory}`;
+              
               return (
-                <div
-                  key={index}
-                  onClick={() => setSelectedProject(project)}
-                  className="group relative cursor-pointer"
-                >
-                  <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl md:rounded-2xl overflow-hidden hover:bg-white/10 hover:border-white/30 transition-all hover:-translate-y-2 duration-300 shadow-xl h-full">
-                    {/* Image */}
-                    <div className="aspect-square relative overflow-hidden">
-                      <img 
-                        src={project.image} 
-                        alt={project.title} 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                <div key={index} className="group">
+                  {/* Subcategory Header - Clickable */}
+                  <button
+                    onClick={() => setExpandedSubcategory(isExpanded ? null : `${item.category}-${item.subcategory}`)}
+                    className="w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 mb-4 hover:bg-white/10 transition-all"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className={`bg-gradient-to-r ${item.color} p-3 rounded-xl`}>
+                          <Icon className="w-6 h-6 text-white" />
+                        </div>
+                        <div className="text-left">
+                          <h3 className="text-xl md:text-2xl font-bold text-white">{item.subcategory}</h3>
+                          <p className="text-slate-400 text-sm">{item.category} • {item.totalProjects} projects</p>
+                        </div>
+                      </div>
+                      <ChevronRight className={`w-6 h-6 text-white transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
+                    </div>
+                  </button>
+
+                  {/* Carousel - Shows when expanded */}
+                  {isExpanded && (
+                    <div className="animate-in fade-in slide-in-from-top-4 duration-300">
+                      <CarouselView 
+                        projects={item.projects}
+                        subcategory={item.subcategory}
+                        color={item.color}
+                        icon={Icon}
                       />
-                      
-                      {/* Category Badge */}
-                      <div className="absolute top-3 left-3">
-                        <div className={`bg-gradient-to-r ${project.color} text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-2xl flex items-center gap-1`}>
-                          <Icon className="w-3 h-3" />
-                          {project.subcategory}
-                        </div>
-                      </div>
-
-                      {/* Live Link Badge */}
-                      {project.liveLink && (
-                        <div className="absolute top-3 right-3">
-                          <div className="bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-2xl flex items-center gap-1">
-                            <Globe className="w-3 h-3" />
-                            Live
-                          </div>
-                        </div>
-                      )}
                     </div>
-
-                    {/* Content */}
-                    <div className="p-4">
-                      <h3 className="text-base md:text-lg font-bold text-white mb-1 group-hover:text-purple-400 transition-colors line-clamp-1">
-                        {project.title}
-                      </h3>
-                      <p className="text-xs md:text-sm text-indigo-400 font-semibold mb-2">{project.client}</p>
-                      <p className="text-xs text-slate-300 line-clamp-2 mb-3">{project.description}</p>
-                      
-                      {/* Impact Badge */}
-                      <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-lg px-3 py-2">
-                        <div className="flex items-center gap-2">
-                          <TrendingUp className="w-3 h-3 text-green-400 flex-shrink-0" />
-                          <p className="text-xs text-green-400 font-semibold line-clamp-1">{project.impact}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  )}
                 </div>
               );
             })}
           </div>
 
           {/* No Results */}
-          {filteredProjects.length === 0 && (
+          {filteredSubcategories.length === 0 && (
             <div className="text-center py-12 md:py-20">
               <Search className="w-16 h-16 md:w-20 md:h-20 text-slate-600 mx-auto mb-4" />
               <h3 className="text-xl md:text-2xl font-bold text-white mb-2">No projects found</h3>
@@ -343,67 +505,6 @@ export default function PortfolioSection() {
           )}
         </div>
       </div>
-
-      {/* Project Modal */}
-      {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setSelectedProject(null)}>
-          <div className="bg-slate-900/95 border border-white/20 rounded-2xl md:rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-            <div className="relative">
-              <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-64 md:h-96 object-cover rounded-t-2xl md:rounded-t-3xl" />
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center transition-all"
-              >
-                <X className="w-5 h-5 text-white" />
-              </button>
-              
-              <div className="absolute top-4 left-4">
-                <div className={`bg-gradient-to-r ${selectedProject.color} text-white text-sm font-bold px-4 py-2 rounded-full shadow-2xl flex items-center gap-2`}>
-                  <selectedProject.icon className="w-4 h-4" />
-                  {selectedProject.subcategory}
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 md:p-8">
-              <h2 className="text-2xl md:text-4xl font-black text-white mb-2">{selectedProject.title}</h2>
-              <p className="text-lg text-indigo-400 font-semibold mb-4">{selectedProject.client}</p>
-              
-              <div className="space-y-4 mb-6">
-                <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                  <h4 className="text-sm font-bold text-slate-400 mb-1">Description</h4>
-                  <p className="text-white">{selectedProject.description}</p>
-                </div>
-                
-                <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl p-4 border border-green-500/30">
-                  <h4 className="text-sm font-bold text-green-400 mb-2 flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4" />
-                    Impact & Results
-                  </h4>
-                  <p className="text-white font-semibold">{selectedProject.impact}</p>
-                </div>
-
-                {selectedProject.platform && (
-                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                    <h4 className="text-sm font-bold text-slate-400 mb-1">Platform</h4>
-                    <p className="text-white">{selectedProject.platform}</p>
-                  </div>
-                )}
-              </div>
-
-              {selectedProject.liveLink && (
-                <button
-                  onClick={() => window.open(selectedProject.liveLink, "_blank")}
-                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold px-6 py-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-2xl"
-                >
-                  <ExternalLink className="w-5 h-5" />
-                  Visit Live Website
-                </button>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
