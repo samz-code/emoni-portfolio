@@ -34,7 +34,6 @@ export default function Footer() {
     { label: "About", id: "about" },
     { label: "Services", id: "services" },
     { label: "Portfolio", id: "portfolio" },
-    { label: "Process", id: "process" },
     { label: "Testimonials", id: "testimonials" },
     { label: "Rate Card", id: "rate-card" },
     { label: "Contact", id: "contact" }
