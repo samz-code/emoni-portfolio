@@ -4,8 +4,8 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import RateCardSection from "@/components/RateCardSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import TermsSection from "@/components/TermsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
