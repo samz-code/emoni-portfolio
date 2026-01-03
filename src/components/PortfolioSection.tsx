@@ -123,7 +123,7 @@ const portfolioData = {
         client: "City Events Committee",
         description: "Vibrant and energetic flyer capturing the essence of summer concerts",
         impact: "Sold out event in 3 days",
-        image: "/assets/posters/poster2.jpg",
+        image: "/assets/posters/mercy.jpg",
         subcategory: "Posters & Flyers"
       },
       {
@@ -131,7 +131,7 @@ const portfolioData = {
         client: "Tech Solutions Inc",
         description: "Professional and modern design for annual business summit",
         impact: "500+ registrations achieved",
-        image: "/assets/posters/poster3.jpg",
+        image: "/assets/posters/tour.jpg",
         subcategory: "Posters & Flyers"
       },
       {
@@ -139,7 +139,7 @@ const portfolioData = {
         client: "Hope Foundation",
         description: "Compassionate design highlighting the cause and event details",
         impact: "$50K raised for the cause",
-        image: "/assets/posters/poster4.jpg",
+        image: "/assets/posters/mwale.jpg",
         subcategory: "Posters & Flyers"
       },
       {
@@ -147,7 +147,7 @@ const portfolioData = {
         client: "Urban Cafe",
         description: "Eye-catching design to announce new restaurant opening",
         impact: "300+ customers on opening day",
-        image: "/assets/posters/poster5.jpg",
+        image: "/assets/posters/pauline.jpg",
         subcategory: "Posters & Flyers"
       },
       {
