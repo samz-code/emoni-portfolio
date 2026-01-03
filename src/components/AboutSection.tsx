@@ -187,7 +187,7 @@ export default function AboutSection() {
 
   const handleDownloadResume = () => {
     // Replace this with your actual resume file path
-    const resumePath = "/path/to/your/resume.pdf";
+    const resumePath = "/assets/documents/Samuel_Emoni_Resume.pdf";
     const link = document.createElement('a');
     link.href = resumePath;
     link.download = "Samuel_Emoni_Resume.pdf";

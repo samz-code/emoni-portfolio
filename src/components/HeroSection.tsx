@@ -75,7 +75,7 @@ export default function HeroSection() {
         radius: Math.random() * 2 + 1,
         vx: Math.random() * 2 - 1,
         vy: Math.random() * 2 - 1,
-        color: ['#818cf8', '#c084fc', '#ec4899'][Math.floor(Math.random() * 3)]
+        color: ['#818cf8', '#c084fc', '#f3248cff'][Math.floor(Math.random() * 3)]
       });
     }
 
@@ -194,17 +194,22 @@ export default function HeroSection() {
             {/* Hero Content */}
             <div className="text-center space-y-6 md:space-y-8 mb-12 md:mb-16">
               
-              
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#CF2676]/20 to-purple-500/20 border border-[#CF2676]/30 rounded-full px-4 md:px-6 py-2 md:py-3 mb-4 backdrop-blur-xl animate-float">
+                <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-[#CF2676] animate-pulse" />
+                <span className="text-white font-semibold text-xs md:text-sm">Professional Digital Services</span>
+              </div>
 
               {/* Main Heading with Glowing Effect */}
               <div className="relative">
                 <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-tight text-white mb-4 md:mb-6 px-2">
-                  Transform Your
+                  Digital Excellence
+
                   <br />
                   <span className="relative inline-block">
                     <span className="absolute inset-0 blur-2xl md:blur-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-50 animate-pulse" />
                     <span className="relative bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
-                      Digital Vision
+                      Delivered
                     </span>
                   </span>
                 </h1>
@@ -227,26 +232,25 @@ export default function HeroSection() {
               </div>
 
               <p className="text-sm md:text-xl lg:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light px-4">
-                From <span className="text-pink-400 font-semibold">stunning designs</span> and <span className="text-purple-400 font-semibold">professional videos</span> to <span className="text-indigo-400 font-semibold">custom web solutions</span>—complete digital transformation.
+                Professional <span className="text-pink-400 font-semibold">Graphic design,Web development</span> and <span className="text-purple-400 font-semibold"> Video production</span> Services <span className="text-indigo-400 font-semibold"> Quality work, </span>delivered on time.
               </p>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-6 md:pt-8 px-4">
                 <button 
-                  className="w-full sm:w-auto relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 text-white text-base md:text-xl px-8 md:px-12 py-4 md:py-8 rounded-xl md:rounded-2xl shadow-2xl shadow-purple-500/50 group transform hover:scale-105 transition-all duration-300 overflow-hidden font-bold"
+                  className="w-full sm:w-auto relative bg-gradient-to-r from-[#CF2676] to-purple-600 hover:from-[#CF2676] hover:to-[#CF2676] text-white text-base md:text-lg px-8 md:px-12 py-4 md:py-5 rounded-full shadow-2xl shadow-[#CF2676]/50 group transform hover:scale-105 transition-all duration-300 overflow-hidden font-bold"
                   onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  <span className="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <span className="relative flex items-center justify-center gap-2 md:gap-3">
                     Start Your Project
-                    <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform" />
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </button>
                 <button 
-                  className="w-full sm:w-auto text-base md:text-xl px-8 md:px-12 py-4 md:py-8 rounded-xl md:rounded-2xl border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-xl transform hover:scale-105 transition-all duration-300 shadow-xl font-bold"
+                  className="w-full sm:w-auto text-base md:text-lg px-8 md:px-12 py-4 md:py-5 rounded-full border-2 border-white/30 text-white hover:bg-white/10 hover:border-[#CF2676]/50 backdrop-blur-xl transform hover:scale-105 transition-all duration-300 font-bold"
                   onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  Explore Portfolio
+                  View Portfolio
                 </button>
               </div>
 
