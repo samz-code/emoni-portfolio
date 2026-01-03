@@ -270,17 +270,20 @@ export default function AboutSection() {
               <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 w-16 h-16 md:w-24 md:h-24 bg-pink-500/30 rounded-full blur-2xl md:blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
             </div>
 
-            {/* Content */}
+           {/* Content */}
             <div className="space-y-6 md:space-y-8 order-2 lg:order-2">
               <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl md:rounded-2xl p-6 md:p-8 hover:bg-white/10 transition-all shadow-xl">
                 <p className="text-base md:text-lg lg:text-xl text-white leading-relaxed">
-                  Hi! I'm <strong className="text-indigo-400">Samuel A. Emoni</strong>, a Computer Science Graduate and multi-talented professional with over <strong className="text-purple-400">4 years of experience in creative design</strong> and more than <strong className="text-pink-400">3 years in programming and system development</strong>.
+                  Hi! I'm a <strong className="text-indigo-400">Computer Science Graduate</strong> from <strong className="text-purple-400">Chuka University</strong>, equipped with comprehensive knowledge in <strong className="text-pink-400">software development, system design, and digital innovation</strong>.
                 </p>
                 <p className="text-base md:text-lg lg:text-xl text-slate-300 leading-relaxed mt-4">
-                  I specialize in <strong className="text-cyan-400">graphic design, video editing, professional document design, web and system development, programming, hardware troubleshooting, and computer repair</strong>. I have successfully completed over <strong className="text-yellow-400">1000 freelance projects</strong> for clients worldwide.
+                  I specialize in <strong className="text-cyan-400">web development, custom software solutions, graphic design, digital marketing, and IT consulting</strong>. I bring <strong className="text-yellow-400">fresh perspectives, creative expertise, and modern development practices</strong> to help businesses and individuals establish their digital presence and leverage technology for growth.
+                </p>
+                <p className="text-base md:text-lg lg:text-xl text-slate-300 leading-relaxed mt-4">
+                  Whether you need a <strong className="text-indigo-400">responsive website, custom application, brand identity design, social media content, marketing campaigns, or technical support</strong>, I deliver <strong className="text-purple-400">reliable, visually compelling, and results-driven solutions</strong> tailored to your specific goals.
                 </p>
               </div>
-
+              
               {/* Download Resume Button */}
               <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-xl border border-green-500/30 rounded-xl md:rounded-2xl p-6 md:p-8 hover:from-green-500/20 hover:to-emerald-500/20 transition-all duration-300">
                 <div className="flex items-center justify-between flex-wrap gap-4">
