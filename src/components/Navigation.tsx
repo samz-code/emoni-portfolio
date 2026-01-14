@@ -6,6 +6,7 @@ const navItems = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Courses", href: "#courses" },
   { label: "Rate Card", href: "#rate-card" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" }
@@ -17,7 +18,6 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Update active section based on scroll position
       const sections = navItems.map(item => item.href.replace("#", ""));
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);

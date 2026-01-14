@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import PortfolioSection from "@/components/PortfolioSection";
+import CoursesSection from "@/components/CoursesSection";  // Add this import
 import RateCardSection from "@/components/RateCardSection";
 import TermsSection from "@/components/TermsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -17,9 +18,10 @@ const Index = () => {
       <AboutSection />
       <ServicesSection />
       <PortfolioSection />
+      <CoursesSection />  {/* Add this line */}
       <RateCardSection />
-        <TermsSection />
-        <TestimonialsSection />
+      <TermsSection />
+      <TestimonialsSection />
       <ContactSection />
       <Footer />
     </div>
