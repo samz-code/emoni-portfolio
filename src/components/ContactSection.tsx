@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Phone, Mail, MessageCircle, Send, MapPin, Facebook, Instagram, Linkedin, Globe, Clock, Sparkles, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, MessageCircle, Send, MapPin, Facebook, Instagram, Linkedin, Globe, Clock, Sparkles, CheckCircle2, Github } from "lucide-react";
 
 const services = [
   "Logo Design", "Poster/Flyer Design", "Branding Package", "Website Development",
@@ -148,7 +148,7 @@ export default function ContactSection() {
                 </div>
                 <div className="flex items-center gap-2 text-xs md:text-sm text-slate-300">
                   <Clock className="w-4 h-4" />
-                  <span>Mon-Sat: 8AM-10PM | Sun: 9AM-8PM (EAT)</span>
+                  <span>Mon-Sat: 8AM-10PM | Sun: 2PM-8PM (EAT)</span>
                 </div>
               </div>
 
@@ -237,10 +237,10 @@ export default function ContactSection() {
                   </button>
                   <button 
                     className="bg-white/10 border border-white/20 hover:bg-gray-700 hover:border-gray-700 text-white font-semibold py-2 px-3 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm"
-                    onClick={() => window.open("https://www.tiktok.com/@sam_e254", "_blank")}
+                    onClick={() => window.open("https://github.com/Samz-Code", "_blank")}
                   >
-                    <Globe className="w-4 h-4" />
-                    TikTok
+                    <Github className="w-4 h-4" />
+                    GitHub
                   </button>
                 </div>
               </div>

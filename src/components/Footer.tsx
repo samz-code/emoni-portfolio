@@ -1,4 +1,4 @@
-import { Heart, ArrowUp, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Globe, Sparkles } from "lucide-react";
+import { Heart, ArrowUp, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Globe, Sparkles, Github } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Footer() {
@@ -180,27 +180,27 @@ export default function Footer() {
                 <div className="flex gap-2">
                   <button
                     className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:bg-blue-500/20 hover:border-blue-500/50 flex items-center justify-center transition-all hover:scale-110"
-                    onClick={() => handleSocialClick('facebook')}
+                    onClick={() => window.open("https://www.facebook.com/profile.php?id=61580678667530", "_blank")}
                   >
                     <Facebook className="w-4 h-4 text-white" />
                   </button>
                   <button
                     className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:bg-pink-500/20 hover:border-pink-500/50 flex items-center justify-center transition-all hover:scale-110"
-                    onClick={() => handleSocialClick('instagram')}
+                    onClick={() => window.open("https://www.instagram.com/Emoni_Samuel", "_blank")}
                   >
                     <Instagram className="w-4 h-4 text-white" />
                   </button>
                   <button
                     className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:bg-blue-600/20 hover:border-blue-600/50 flex items-center justify-center transition-all hover:scale-110"
-                    onClick={() => handleSocialClick('linkedin')}
+                    onClick={() => window.open("https://www.linkedin.com/in/samuelemoni/", "_blank")}
                   >
                     <Linkedin className="w-4 h-4 text-white" />
                   </button>
                   <button
                     className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:bg-gray-600/20 hover:border-gray-600/50 flex items-center justify-center transition-all hover:scale-110"
-                    onClick={() => handleSocialClick('tiktok')}
+                    onClick={() => window.open("https://github.com/Samz-Code", "_blank")}
                   >
-                    <Globe className="w-4 h-4 text-white" />
+                    <Github className="w-4 h-4 text-white" />
                   </button>
                 </div>
               </div>
