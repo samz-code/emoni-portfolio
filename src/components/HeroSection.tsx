@@ -257,10 +257,10 @@ export default function HeroSection() {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 pt-12 md:pt-16 max-w-5xl mx-auto px-4">
                 {[
-                  { icon: Award, value: "4+", label: "Years Design", color: "indigo" },
-                  { icon: Briefcase, value: "3+", label: "Years Dev", color: "purple" },
+                  { icon: Award, value: "6+", label: "Years Design", color: "indigo" },
+                  { icon: Briefcase, value: "5+", label: "Years Dev", color: "purple" },
                   { icon: Star, value: "1000+", label: "Projects", color: "pink" },
-                  { icon: Users, value: "500+", label: "Clients", color: "cyan" }
+                  { icon: Users, value: "5000+", label: "Clients", color: "cyan" }
                 ].map((stat, i) => (
                   <div 
                     key={i}
