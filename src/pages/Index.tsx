@@ -1,9 +1,8 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import PortfolioSection from "@/components/PortfolioSection";
-import CoursesSection from "@/components/CoursesSection";  // Add this import
+import ProjectsSection from "@/components/ProjectsSection";
+import CoursesSection from "@/components/CoursesSection";  
 import RateCardSection from "@/components/RateCardSection";
 import TermsSection from "@/components/TermsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -16,8 +15,7 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
-      <PortfolioSection />
+      <ProjectsSection />
       <CoursesSection />  {/* Add this line */}
       <RateCardSection />
       <TermsSection />

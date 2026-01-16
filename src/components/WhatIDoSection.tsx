@@ -54,21 +54,21 @@ const services = [
       "Color Grading & Effects"
     ]
   },
-{
-  category: "Technical Support",
-  icon: Wrench,
-  color: "from-yellow-500 to-amber-500",
-  bgColor: "from-yellow-500/20 to-amber-500/10",
-  popular: false,
-  items: [
-    "Hardware Repair & Upgrades",
-    "System Setup & Configuration",
-    "Network Installation & Security",
-    "Technical Troubleshooting & Support"
-  ]
-},
-{
-  category: "IT Consultation & Training",
+  {
+    category: "Technical Support",
+    icon: Wrench,
+    color: "from-yellow-500 to-amber-500",
+    bgColor: "from-yellow-500/20 to-amber-500/10",
+    popular: false,
+    items: [
+      "Hardware Repair & Upgrades",
+      "System Setup & Configuration",
+      "Network Installation & Security",
+      "Technical Troubleshooting & Support"
+    ]
+  },
+  {
+    category: "IT Consultation & Training",
     icon: Sparkles,
     color: "from-cyan-500 to-teal-500",
     bgColor: "from-cyan-500/20 to-teal-500/10",
@@ -89,12 +89,12 @@ const benefits = [
   { icon: Zap, text: "24/7 Support", description: "Always available to assist you" },
 ];
 
-export default function ServicesSection() {
+export default function WhatIDoSection() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (
-    <section id="services" className="py-12 md:py-20 lg:py-32 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 overflow-hidden relative">
-      {/* Gradient Overlays - Like Hero */}
+    <section id="what-i-do" className="py-12 md:py-20 lg:py-32 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 overflow-hidden relative">
+      {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-0" />
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-indigo-500/30 rounded-full blur-[80px] md:blur-[120px] animate-pulse" />
@@ -111,7 +111,7 @@ export default function ServicesSection() {
               <span className="text-white font-semibold text-sm md:text-base">What I Offer</span>
             </div>
             <h2 className="text-3xl md:text-5xl lg:text-7xl font-black mb-4 md:mb-6 text-white">
-              My <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
+              What <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">I Do</span>
             </h2>
             <p className="text-base md:text-xl lg:text-2xl text-slate-300 max-w-3xl mx-auto">
               Professional design, development & technical solutions
@@ -182,8 +182,6 @@ export default function ServicesSection() {
                       ))}
                     </div>
 
-              
-
                     {/* Corner Decoration */}
                     <div className="absolute top-4 right-4 w-20 h-20 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
                       <Icon className="w-full h-full transform rotate-12" />
@@ -220,7 +218,7 @@ export default function ServicesSection() {
                   </button>
                   <button 
                     className="w-full sm:w-auto bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white text-base md:text-xl px-8 md:px-12 py-4 md:py-6 rounded-xl md:rounded-2xl hover:bg-white/20 transform hover:scale-105 transition-all font-bold inline-flex items-center justify-center gap-2 group"
-                    onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
+                    onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
                   >
                     <Sparkles className="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-12 transition-transform" />
                     View Work
